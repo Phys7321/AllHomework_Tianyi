@@ -39,24 +39,19 @@ if gamma<=3
     [t,y]=ode45(@f,tspan,y0,opts,omega0,gamma,A0,w);        % Solve ODE
 else
     opts = odeset('events',@events,'refine',6);
-    [t,y]=ode45(@f,tspan,y0,opts,omega0,gamma,A0,w);        % Solve ODE
+    [t,y]=ode45(@f,tspan,y0,opts,omega0,gamma,A0,w);        % Stop integration when equilibrium
 end
 
 sol = [t,y];
 
-%if w==0
-    ind1 = y(:,2).*circshift(y(:,2), [-1 0]) <= 0;         % Require thetadot=0
-    ind2 = abs(y(:,1)) >= 0.0001;                          % Require amplitude at least 0.0001
-    lgcl_ind = ind1 & ind2;                                % Logical indicator
-    period = 2*mean(diff(t(lgcl_ind)));                    % Find t satisifying indicator
-%else
-%    opts = odeset('refine',6);
-%    [t_unpert,y_unpert]=ode45(@f,tspan,y0,opts,omega0,gamma,0,0);  % Find the steady state through                                                   
-%    ind3 = abs(y_unpert(:,1)) <= 0.0001;                           %   unperturbed    
-%    ind1 = y(:,2).*circshift(y(:,2), [-1 0]) <= 0;                 %   case
-%    lgcl_ind = ind1 & ind3;                                    
-%    period = 2*mean(diff(t(lgcl_ind)));  
-%end
+if w==0
+    ind = y(:,2).*circshift(y(:,2), [-1 0]) <= 0;     % Require thetadot=0
+    period = 2*mean(diff(t(ind)));                    % Find t satisifying indicator
+else
+    ind = y(:,2).*circshift(y(:,2), [-1 0]) <= 0;     % Require thetadot=0
+    ind = ind(150:end);                               % Cut the first a few cycles
+    period = 2*mean(diff(t(ind))); 
+end
 
 if grph
     figure
@@ -71,8 +66,8 @@ dydt = [y(2);-2*gamma*y(2)-omega0^2*sin(y(1))+A0*cos(w*t)];
 
 
 function [value,isterminal,dir] = events(t,y,omega0,gamma,A0,w)
-% Locate the time when height passes through zero in a 
+% Locate the time when angle passes through 0.0001 in a 
 % decreasing direction and stop integration.
-value = y(1)-0.0001;   % Detect height = 0
-isterminal = 1;   % Stop the integration
-dir = -1;   % Negative direction only
+value = y(1)-0.0001;    % Detect theta = 0.0001
+isterminal = 1;         % Stop the integration
+dir = -1;               % Negative direction only
