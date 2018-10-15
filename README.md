@@ -12,6 +12,8 @@ Include all homeworks here.
         Oscillation 1: HW03_1.mlx, pendulum1.m
         Oscillation 2: HW03_2.mlx, pendulum2.m
         
-10/15  HW03 Oscillation 3, still working on the rest part...
+10/15  HW03 Oscillation 3, 4(stuck with part c), still working on the rest part...
 
         Oscillation 3: HW03_3.mlx, damped_oscillator.m
+        Oscillation 4: HW03_4.mlx, forced_oscillator.m
+
