@@ -49,10 +49,8 @@ end
 
 sol = [t,y];
 
-ind1 = y(:,2).*circshift(y(:,2), [-1 0]) <= 0;         % Require thetadot=0
-ind2 = abs(y(:,1)) >= abs(0.01*y(1,1));                % Require amplitude at least 1% of theta0
-lgcl_ind = ind1 & ind2;                                % Logical indicator
-period = 2*mean(diff(t(lgcl_ind)));                    % Find t satisifying indicator
+ind = y(:,2).*circshift(y(:,2), [-1 0]) <= 0;         % Require thetadot=0
+period = 2*mean(diff(t(ind)));                        % Find t satisifying indicator
 
 if grph
     figure
@@ -68,8 +66,8 @@ dydt = [y(2);-2*gamma*y(2)-omega0^2*sin(y(1))];
 
 
 function [value,isterminal,dir] = events(t,y,gamma,omega0)
-% Locate the time when height passes through zero in a 
+% Locate the time when angle passes through 0.0001 in a 
 % decreasing direction and stop integration.
-value = y(1)-0.0001;   % Detect height = 0
-isterminal = 1;   % Stop the integration
-dir = -1;   % Negative direction only
+value = y(1)-0.0001;    % Detect theta = 0.0001
+isterminal = 1;         % Stop the integration
+dir = -1;               % Negative direction only
