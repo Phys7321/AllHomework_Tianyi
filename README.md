@@ -20,4 +20,9 @@ Include all homeworks here.
 10/18  HW03 Oscillation 4, 5 (Please look at HW03_4and5.mlx for updated question 4.)
 
         Oscillation 4&5: HW03_4and5.mlx, forced_oscillator.m        
+        
+10/20  HW03 Heatflow Exercise - still working on HW03 heatflow part
 
+       All shown figures in notebook are at their initial condition - 
+       I commented all the 'display_animation' command to avoid too large file.
+        
