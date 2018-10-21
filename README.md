@@ -21,7 +21,10 @@ Include all homeworks here.
 
         Oscillation 4&5: HW03_4and5.mlx, forced_oscillator.m        
         
-10/20  HW03 Heatflow Exercise - still working on HW03 heatflow part
+10/20  HW03 Heatflow
+       
+       Heatflow 1: HW03_6_heatflow_exercise.ipynb
+       Heatflow 2: HW03_7_TwoBarsInContact.ipynb
 
        All shown figures in notebook are at their initial condition - 
        I commented all the 'display_animation' command to avoid too large file.
