@@ -29,7 +29,7 @@ Include all homeworks here.
        All shown figures in notebook are at their initial condition - 
        I commented all the 'display_animation' command to avoid too large file.
        
- 10/23  HW04 uploaded, metropolis notebook needs some modification on equiliration time.
+ 10/23  HW04 uploaded, metropolis notebook needs some modification on equilibration time.
         
         Problem 1: HW04_RandomNumbers.mlx
         Problem 2: HW04_Metropolis.ipynb
