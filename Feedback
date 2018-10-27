@@ -1,2 +1,9 @@
 # Feedback 
 All looks good. I do like how you refined your angle values to discern which angle had the longest range when air resistance was factored in. But don't forget to print out an answer to the question, the graph isn't always that clear (find the max range for the given angle)
+10.27
+HW3: 
+P1 +P2 - looks good
+P3 - please check your notation with the one that is specified in the jupyter notebook. I don't see anything wrong with the code, but the results look a little strange - mostly to do with the value of gamma at which the motion ceases to be oscillatory.
+p4 - I would take another look through the phase angle calculations. you calculate a whole array of deltas - are they anywhere close to one another?
+p5 - looks good
+P6+P7 - All the animations are working (I do appreciate the effort you put in so that I wouldn't necessarily have to run all these animations, I did run a couple though).
