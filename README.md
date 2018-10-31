@@ -38,3 +38,4 @@ Include all homeworks here.
         
         HW03_3.mlx, damped_oscillator.m
         HW03_4&5.mlx, forced_oscillator.m
+        HW04_Metropolis.ipynb, modified the definition of equi time, but still have problems with find exact time...
