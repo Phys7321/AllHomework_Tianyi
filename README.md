@@ -34,3 +34,7 @@ Include all homeworks here.
         Problem 1: HW04_RandomNumbers.mlx
         Problem 2: HW04_Metropolis.ipynb
         
+ 10/31  HW03 modifed, notation of gamma is modified, praphs are all re-generated.
+        
+        HW03_3.mlx, damped_oscillator.m
+        HW03_4&5.mlx, forced_oscillator.m
