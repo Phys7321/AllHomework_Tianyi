@@ -1,11 +1,11 @@
 % Forced damped simple pendulum
 
 % Equation of motion: 
-% d^2theta/dt^2 + 2*gamma*dtheta/dt + omega0^2*sin(theta)= A0 cos(wt)
+% d^2theta/dt^2 + gamma*dtheta/dt + omega0^2*theta= A0 cos(wt)
 
 % Rewrite as two, first order ODEs:
 % dy1/dt = y2
-% dy2/dt= -2*gamma*y2-omega0_sq*sin(y1) + A0*cos(wt)
+% dy2/dt= -gamma*y2-omega0_sq*y1 + A0*cos(wt)
 
 function [period,sol,A_steady,sol_steady] = forced_oscillator(...
                         omega0, gamma, A0, w, theta0, thetadot0, grph)
@@ -28,7 +28,6 @@ m = 1;
 g = 9.81;
 R = g/omega0^2;
 T_small_angle = 2*pi/omega0;
-b = 2*m*gamma;
 
 y0 = [theta0, thetadot0];                   % Initial condition
 N = 40;                                     % Number of cycles
@@ -69,7 +68,7 @@ if grph
 end
 
 function dydt=f(t,y,omega0,gamma,A0,w)
-dydt = [y(2);-2*gamma*y(2)-omega0^2*sin(y(1))+A0*cos(w*t)];
+dydt = [y(2);-gamma*y(2)-omega0^2*y(1)+A0*cos(w*t)];
 
 
 function [value,isterminal,dir] = events(t,y,omega0,gamma,A0,w)
