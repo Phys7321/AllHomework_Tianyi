@@ -38,4 +38,10 @@ Include all homeworks here.
         
         HW03_3.mlx, damped_oscillator.m
         HW03_4&5.mlx, forced_oscillator.m
+        
         HW04_Metropolis.ipynb, modified the definition of equi time, but still have problems with find exact time...
+        
+11/03   HW05 uploaded, 5.3 (importance sampling) needs modification 
+
+        5.1:     HW05_MC_Randomness.ipynb
+        5.2&5.3: HW05_UsingMonteCarlo.ipynb
