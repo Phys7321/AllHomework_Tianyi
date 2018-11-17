@@ -7,3 +7,7 @@ P3 - please check your notation with the one that is specified in the jupyter no
 p4 - I would take another look through the phase angle calculations. you calculate a whole array of deltas - are they anywhere close to one another?
 p5 - looks good
 P6+P7 - All the animations are working (I do appreciate the effort you put in so that I wouldn't necessarily have to run all these animations, I did run a couple though).
+11.17
+Finally getting to HW4: 
+I'm happy that you coded the random number generator in MATLAB (I think that it was the easier of the two options). You can see all that nothing looks bad about the IBM lcm until the visual test.
+As far as the .ipynb work - I think you should take another look at equilibration time. This IS a fuzzy concept, but right now, I don't see that your program gives an indication of how this time depends on the step size delta, just the number of steps.
