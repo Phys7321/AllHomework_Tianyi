@@ -11,3 +11,5 @@ P6+P7 - All the animations are working (I do appreciate the effort you put in so
 Finally getting to HW4: 
 I'm happy that you coded the random number generator in MATLAB (I think that it was the easier of the two options). You can see all that nothing looks bad about the IBM lcm until the visual test.
 As far as the .ipynb work - I think you should take another look at equilibration time. This IS a fuzzy concept, but right now, I don't see that your program gives an indication of how this time depends on the step size delta, just the number of steps.
+11.28
+HW5 - On the importance sampling - I don't think that you are getting this concept - the values that you calculate for these integrals should be very close to the actual answers. Take another look or come see me.
