@@ -47,3 +47,5 @@ Include all homeworks here.
         5.2&5.3: HW05_UsingMonteCarlo.ipynb
 
 12/03   HW05 modified importance sampling
+        
+        HW05_UsingMonteCarlo_modified.ipynb
