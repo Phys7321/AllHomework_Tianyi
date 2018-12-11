@@ -13,3 +13,6 @@ I'm happy that you coded the random number generator in MATLAB (I think that it 
 As far as the .ipynb work - I think you should take another look at equilibration time. This IS a fuzzy concept, but right now, I don't see that your program gives an indication of how this time depends on the step size delta, just the number of steps.
 11.28
 HW5 - On the importance sampling - I don't think that you are getting this concept - the values that you calculate for these integrals should be very close to the actual answers. Take another look or come see me.
+
+12.11
+Took another look at HW3 #3 and #4 - I'm seeing the same problems with the phase angle calculations and at the end of problem 4.mlx a graph that I don't understand.
